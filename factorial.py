@@ -5,5 +5,8 @@ def factorial(n):
         return n * factorial(n-1)
 
 # Test the function
-number = int(input("Enter a number to find its factorial: "))
-print("Factorial of", number, "is", factorial(number))
+number = int(input("Enter a non-negative integer to find its factorial: "))
+if number < 0:
+    print("Factorial is not defined for negative numbers.")
+else:
+    print("Factorial of", number, "is", factorial(number))
